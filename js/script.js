@@ -1,3 +1,11 @@
+
+window.onload = function(){
+	document.getElementById("boton").addEventListener("click", agregar);
+}
+
+
+
+
 function agregar(){
 	
 }
@@ -31,6 +39,25 @@ nuevasTareas.appendChild(chck);
 nuevasTareas.appendChild(basura);
 nuevasTareas.appendChild(cora);
 //asigna padres a nodos
+
+chck.addEventListener("click", function(){
+	elementoContenedor.classList.toggle("tachado");
+	})
+//al clickear elimina o agraga tachado al cont.
+
+basura.addEventListener("click", function(){
+	cont.removeChild(nuevasTareas);
+}) //remueve el icono basurero al clickearlo
+
+cora.addEventListener("click", function(){
+	cora.classList.toggle("red");
+}) //al click se pone rojo
+
+if(tareas == null || tareas.length == 0){
+	alert("¡Error! Debe ingresar una tarea");
+	return false;
+}
+// valida q textarea no este vacia a presionar aceptar
 
 
 
