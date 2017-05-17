@@ -1,16 +1,10 @@
 
 window.onload = function(){
-	document.getElementById("boton").addEventListener("click", agregar);
+	document.getElementById("boton").addEventListener("click", Agregar);
 }
-
-
-
 
 function agregar(){
 	
-}
-
-
 var tareas = document.getElementById("tarea").value;
 document.getElementById("tarea").value=""; //recupera la tarea y limpia textarea
 
@@ -30,8 +24,10 @@ cont.appendChild(nuevasTareas);
 var chck = document.createElement("input");
 chck.type = "checkbox";
 chck.setAttribute("class","check");
+
 var basura = document.createElement("span");
 basura.classList.add("fa","fa-trash-o");
+
 var cora = document.createElement("span");
 cora.classList.add("fa", "fa-heart");
 
@@ -47,7 +43,7 @@ chck.addEventListener("click", function(){
 
 basura.addEventListener("click", function(){
 	cont.removeChild(nuevasTareas);
-}) //remueve el icono basurero al clickearlo
+}) //remueve con el icono basurero al clickearlo
 
 cora.addEventListener("click", function(){
 	cora.classList.toggle("red");
@@ -57,7 +53,7 @@ if(tareas == null || tareas.length == 0){
 	alert("¡Error! Debe ingresar una tarea");
 	return false;
 }
-// valida q textarea no este vacia a presionar aceptar
+// valida q textarea no este vacia al presionar aceptar
 
-
+}
 
